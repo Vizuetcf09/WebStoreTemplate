@@ -3,10 +3,10 @@ import { StoreLayoutComponent } from './pages/layout/store-layout/store-layout.c
 import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        component: StoreLayoutComponent,
-        children: [{ path: '', component: HomeComponent }]
-    },
-    { path: '**', redirectTo: '' }
+  {
+    path: '',
+    component: StoreLayoutComponent,
+    children: [{ path: '', component: HomeComponent }]
+  },
+  { path: '**', redirectTo: '' }
 ];

@@ -5,12 +5,10 @@ import { Header } from '../header/header.component';
 import { Footer } from '../footer/footer.component';
 
 @Component({
-    selector: 'app-store-layout',
-    standalone: true,
-    imports: [CommonModule, RouterOutlet, Header, Footer],
-    templateUrl: './store-layout.component.html',
-    styleUrls: ['./store-layout.component.scss'],
-
+  selector: 'app-store-layout',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, Header, Footer],
+  templateUrl: './store-layout.component.html',
 })
 
 export class StoreLayoutComponent { }

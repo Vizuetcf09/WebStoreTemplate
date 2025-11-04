@@ -45,3 +45,4 @@ Thumbs.db
 # Angular environments
 
 /environments
+.env

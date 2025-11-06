@@ -62,3 +62,5 @@ For more information on using the Angular CLI, including detailed command refere
 # Design
 
 1. [Mobbin](https://merch.mobbin.com/)
+2. [FAINE - Clothing Store](https://www.behance.net/gallery/236634801/FAINE-clothing-store?tracking_source=search_projects|web+store&l=7)
+3. [MOTH - Brnd Store](https://www.behance.net/gallery/236483277/MOTH-Brand-Store?tracking_source=search_projects|web+store&l=11)

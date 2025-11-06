@@ -2,9 +2,9 @@ import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 @Component({
-  selector: 'Card',
+  selector: 'Hero',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './card.component.html',
+  templateUrl: './hero.componet.html'
 })
-export class Card { }
+export class Hero { }

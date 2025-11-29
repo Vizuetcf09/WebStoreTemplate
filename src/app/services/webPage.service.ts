@@ -1,14 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
+import { Product } from '../interfaces/products.interfaces';
 import { environment } from '../../environments/environment';
-import Product from '../interfaces/webPage.interface';
 import { ProductMapper } from '../mapper/product.mapper';
+import { WebPageResponse } from '../interfaces/webPageApi.interface';
 
 @Injectable({ providedIn: 'root' })
 export class WebPageService {
+
   private http = inject(HttpClient);
 
   productsSignal = signal<Product[]>([]);
+  loadingProductSignal = signal(true);
 
   constructor() {
     this.loadWebPageProducts()
@@ -16,10 +19,11 @@ export class WebPageService {
 
   loadWebPageProducts() {
     this.http
-      .get<Product[]>(`${environment.webPageUrl}`)
+      .get<WebPageResponse[]>(`${environment.webPageUrl}`)
       .subscribe((resp) => {
         const products = ProductMapper.mapProductsItemsToProductArray(resp);
         this.productsSignal.set(products);
+        this.loadingProductSignal.set(false);
         console.log(products);
       });
   }

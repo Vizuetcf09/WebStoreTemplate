@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Card } from './components/card.component';
 import { Hero } from "./components/hero/hero.componet";
+import { WebPageService } from "../../services/webPage.service";
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, Card, Hero],
+  imports: [CommonModule, Hero],
   templateUrl: './home.component.html',
 })
-export class HomeComponent { }
+export class HomeComponent {
+  productService = inject(WebPageService).productsSignal;
+}

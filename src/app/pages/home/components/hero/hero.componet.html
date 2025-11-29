@@ -8,4 +8,15 @@
     Comprar ahora
   </button>
 
+  @if (products.length > 0) {
+  <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl">
+
+    @for (product of products; track product._id) {
+    <Card [product]="product"></Card>
+    }
+  </div> }
+
+  @else {
+  <p class="text-gray-500">Cargando Productos...</p>
+  }
 </section>

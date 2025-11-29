@@ -1,8 +1,9 @@
-import Product from "../interfaces/webPage.interface";
+import { WebPageResponse } from "../interfaces/webPageApi.interface";
+import { Product } from "../interfaces/products.interfaces";
 
 export class ProductMapper {
 
-  static mapProductsItemsToProduct(item: Product): Product {
+  static mapProductsItemsToProduct(item: WebPageResponse): Product {
     return {
       _id: item._id,
       name: item.name,
@@ -12,12 +13,11 @@ export class ProductMapper {
       stock: item.stock,
       imageUrl: item.imageUrl,
       createdAt: item.createdAt,
-      updatedAt: item.updatedAt,
-      __v: item.__v
+      updatedAt: item.updatedAt
     };
   }
 
-  static mapProductsItemsToProductArray(items: Product[]): Product[] {
+  static mapProductsItemsToProductArray(items: WebPageResponse[]): Product[] {
     return items.map(this.mapProductsItemsToProduct);
   }
 

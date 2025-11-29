@@ -1,4 +1,4 @@
-export default interface Product {
+export interface Product {
     _id: string;
     name: string;
     description: string;
@@ -8,5 +8,4 @@ export default interface Product {
     imageUrl: string;
     createdAt: Date;
     updatedAt: Date;
-    __v: number;
-}
+} 

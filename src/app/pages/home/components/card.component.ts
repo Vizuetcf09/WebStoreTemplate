@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
-import { Component, inject } from "@angular/core";
-import { WebPageService } from "../../../services/webPage.service";
+import { Component, Input } from "@angular/core";
+import { Product } from "../../../interfaces/products.interfaces";
 
 @Component({
   selector: 'Card',
@@ -10,5 +10,5 @@ import { WebPageService } from "../../../services/webPage.service";
 })
 
 export class Card {
-  webPageProductsService = inject(WebPageService).productsSignal;
+  @Input() product!: Product;
 }

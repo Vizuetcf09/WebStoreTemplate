@@ -1,13 +1,6 @@
 <section
   class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-gray-200 text-center px-6 py-16">
 
-  <Hero></Hero>
-
-  <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl">
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
-  </div>
+  <Hero [products]="productService()"></Hero>
 
 </section>

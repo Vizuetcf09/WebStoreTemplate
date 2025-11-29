@@ -1,10 +1,14 @@
 import { CommonModule } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Card } from "../card.component";
+import { Product } from "../../../../interfaces/products.interfaces";
 
 @Component({
   selector: 'Hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, Card],
   templateUrl: './hero.componet.html'
 })
-export class Hero { }
+export class Hero {
+  @Input() products: Product[] = [];
+}
